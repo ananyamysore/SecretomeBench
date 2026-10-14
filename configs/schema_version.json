@@ -1,0 +1,7 @@
+{
+  "schema_name": "SecretomeBench EvidenceBundle",
+  "schema_version": "1.0.0",
+  "schema_module": "secretomebench.schema.EvidenceBundle",
+  "json_schema_export_command": "secretomebench schema --out docs/schema-v1.json",
+  "compatibility_policy": "Breaking field or semantic changes require a new major schema version"
+}

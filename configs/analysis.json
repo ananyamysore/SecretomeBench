@@ -1,0 +1,11 @@
+{
+  "input_bundle": "../examples/synthetic_evidence.json",
+  "output_dir": "../results/synthetic",
+  "label": "synthetic software validation only",
+  "analysis": {
+    "within_experiment_test": "welch",
+    "technical_replicates": "average within biological_unit_id before inference",
+    "cross_study_pooling": false,
+    "unit_conversion": "explicit secreted-protein concentration conversions only"
+  }
+}

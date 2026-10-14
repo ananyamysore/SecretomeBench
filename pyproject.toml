@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "secretomebench"
+version = "0.1.0"
+description = "Structured evidence extraction and quantitative comparison for MSC secretome studies"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+dependencies = ["pandas>=2.0", "numpy>=1.24", "scipy>=1.10", "statsmodels>=0.14", "matplotlib>=3.7", "pydantic>=2.5"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+dev = ["ruff>=0.4"]
+
+[project.scripts]
+secretomebench = "secretomebench.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E9", "F"]

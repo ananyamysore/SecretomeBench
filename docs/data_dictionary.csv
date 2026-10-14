@@ -1,0 +1,24 @@
+entity,field,meaning,reported_or_normalized,required_or_optional
+Study,study_id,Stable source record key,normalized,required
+Study,publication_id,DOI/PMID or source key when known,reported,optional
+Study,tissue_source_reported,Original cell source wording,reported,optional
+Study,cell_source_normalized,Versioned harmonized cell-source category,normalized,optional
+Experiment,medium_reported,Original culture-medium wording,reported,optional
+Experiment,medium_normalized,Harmonized medium category with mapping version,normalized,optional
+Experiment,conditioning_duration_reported,Original duration expression,reported,optional
+Experiment,conditioning_duration_hours,Explicitly converted duration in hours,normalized,optional
+Experiment,licensing_reported,Original cytokine licensing text,reported,optional
+Sample,biological_unit_id,Independent biological unit linking technical repeats,identifier,required for biological
+Sample,replicate_type,Biological or technical replicate label,reported,required
+Assay,assay_type_reported,Original assay method,reported,required
+Assay,analyte_class,Secreted protein/transcript/intracellular/other,classified,required
+Assay,specimen_type,Conditioned medium/cell lysate/other,classified,required
+Measurement,value_reported,Original value as reported,reported,optional by result_kind
+Measurement,unit_reported,Original measurement unit,reported,optional
+Measurement,value_normalized,Derived value when conversion is valid,normalized,optional
+Measurement,reported_mean,Source-reported group mean,reported,optional
+Measurement,reported_sd,Source-reported standard deviation,reported,optional
+Measurement,reported_se,Source-reported standard error,reported,optional
+Provenance,locator,Table/figure/page/source location,source link,optional
+Provenance,extraction_method,Direct/manual/computed/figure/user/synthetic,source link,required
+Provenance,review_status,Unreviewed/confirmed/corrected/rejected,review workflow,required

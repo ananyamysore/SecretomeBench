@@ -2,7 +2,7 @@ import pytest
 from pydantic import ValidationError
 
 from secretomebench.provenance import duplicate_publication_records, update_review
-from secretomebench.schema import EvidenceBundle, ReviewStatus, Study
+from secretomebench.schema import ReviewStatus, Study
 from secretomebench.synthetic import make_synthetic_bundle
 
 

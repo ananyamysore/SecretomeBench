@@ -18,9 +18,11 @@ jobs:
       - run: python -m pip install -e '.[test,dev]'
       - run: ruff check src tests examples benchmarks
       - run: python -m pytest
-      - run: python examples/generate_synthetic.py
       - run: secretomebench validate examples/synthetic_evidence.json
-      - run: secretomebench analyze examples/synthetic_evidence.json --out /tmp/secretomebench-analysis
+      - run: secretomebench analyze examples/synthetic_evidence.json --out /tmp/secretomebench-static-example
+      - run: python examples/generate_synthetic.py --out /tmp/secretomebench-generated.json
+      - run: secretomebench validate /tmp/secretomebench-generated.json
+      - run: secretomebench analyze /tmp/secretomebench-generated.json --out /tmp/secretomebench-analysis
       - run: secretomebench run configs/analysis.json
       - run: secretomebench synthetic --out /tmp/secretomebench-example
       - run: secretomebench schema --out /tmp/secretomebench-schema.json

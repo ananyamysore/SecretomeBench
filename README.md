@@ -17,8 +17,8 @@ python -m pip install -e '.[test,dev]'
 
 ```bash
 python examples/generate_synthetic.py
-secretomebench validate examples/synthetic_evidence.json
-secretomebench analyze examples/synthetic_evidence.json --out results/synthetic
+secretomebench validate examples/synthetic_evidence_generated.json
+secretomebench analyze examples/synthetic_evidence_generated.json --out results/synthetic
 secretomebench run configs/analysis.json
 ```
 
@@ -28,7 +28,7 @@ Or run the entire deterministic example directly:
 secretomebench synthetic --out results/synthetic
 ```
 
-The outputs include a validated evidence JSON bundle, traceable evidence and review CSVs, field completeness, assay compatibility decisions, within-experiment comparisons, heterogeneity descriptions, run manifest, report JSON, and a figure. Every demo output is marked synthetic.
+`examples/synthetic_evidence.json` is a small inspectable fixture. The generator expands it into the broader deterministic validation fixture. Outputs include a validated evidence JSON bundle, traceable evidence and review CSVs, field completeness, assay compatibility decisions, within-experiment comparisons, heterogeneity descriptions, run manifest, report JSON, and a figure. Every demo output is marked synthetic.
 
 ## Use your evidence
 

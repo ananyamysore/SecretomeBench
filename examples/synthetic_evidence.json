@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "studies": [
+    {
+      "study_id": "synthetic_study",
+      "publication_id": "SYNTHETIC-EXAMPLE-ONLY",
+      "title": "Synthetic MSC secretome example",
+      "publication_year": 2026,
+      "tissue_source_reported": "bone marrow MSC",
+      "cell_source_normalized": "bone_marrow",
+      "provenance": {"source_id": "SYNTH-STATIC-STUDY", "citation": "Synthetic fixture; not a publication", "locator": "generated example", "extraction_method": "synthetic", "verified": false, "verification_note": "No external source; synthetic software fixture"}
+    }
+  ],
+  "experiments": [
+    {
+      "experiment_id": "synthetic_exp",
+      "study_id": "synthetic_study",
+      "cell_passage_reported": "P4 (synthetic)",
+      "medium_reported": "alpha-MEM",
+      "medium_normalized": "alpha_mem",
+      "conditioning_duration_reported": "24 hours",
+      "conditioning_duration_hours": 24,
+      "licensing_reported": "IFN-gamma licensed vs unlicensed (synthetic)",
+      "design": "controlled synthetic example",
+      "provenance": {"source_id": "SYNTH-STATIC-EXP", "citation": "Synthetic fixture; not a publication", "locator": "generated example", "extraction_method": "synthetic", "verified": false}
+    }
+  ],
+  "samples": [
+    {"sample_id": "s_c1", "experiment_id": "synthetic_exp", "biological_unit_id": "c1", "group": "control", "condition_reported": "unlicensed", "condition_normalized": "control", "provenance": {"source_id": "SYNTH-s_c1", "extraction_method": "synthetic", "verified": false}},
+    {"sample_id": "s_c2", "experiment_id": "synthetic_exp", "biological_unit_id": "c2", "group": "control", "condition_reported": "unlicensed", "condition_normalized": "control", "provenance": {"source_id": "SYNTH-s_c2", "extraction_method": "synthetic", "verified": false}},
+    {"sample_id": "s_l1", "experiment_id": "synthetic_exp", "biological_unit_id": "l1", "group": "licensed", "condition_reported": "IFN-gamma licensed", "condition_normalized": "licensed", "provenance": {"source_id": "SYNTH-s_l1", "extraction_method": "synthetic", "verified": false}},
+    {"sample_id": "s_l2", "experiment_id": "synthetic_exp", "biological_unit_id": "l2", "group": "licensed", "condition_reported": "IFN-gamma licensed", "condition_normalized": "licensed", "provenance": {"source_id": "SYNTH-s_l2", "extraction_method": "synthetic", "verified": false}}
+  ],
+  "assays": [
+    {
+      "assay_id": "il6_elisa",
+      "assay_type_reported": "ELISA",
+      "assay_family": "elisa",
+      "analyte_reported": "Interleukin-6",
+      "analyte_normalized": "IL6",
+      "analyte_class": "secreted_protein",
+      "specimen_type": "conditioned_medium",
+      "normalization_method_reported": "concentration per volume",
+      "provenance": {"source_id": "SYNTH-STATIC-ELISA", "extraction_method": "synthetic", "verified": false}
+    },
+    {
+      "assay_id": "ido_qpcr",
+      "assay_type_reported": "RT-qPCR",
+      "assay_family": "qpcr",
+      "analyte_reported": "IDO",
+      "analyte_normalized": "IDO1",
+      "analyte_class": "transcript",
+      "specimen_type": "cell_lysate",
+      "normalization_method_reported": "relative expression; housekeeping normalized",
+      "provenance": {"source_id": "SYNTH-STATIC-QPCR", "extraction_method": "synthetic", "verified": false}
+    }
+  ],
+  "measurements": [
+    {"measurement_id": "il6_c1", "study_id": "synthetic_study", "experiment_id": "synthetic_exp", "sample_id": "s_c1", "assay_id": "il6_elisa", "value_reported": 95.0, "unit_reported": "pg/mL", "original_text": "Synthetic value: 95 pg/mL", "provenance": {"source_id": "SYNTH-il6-c1", "locator": "generated record", "extraction_method": "synthetic", "verified": false}},
+    {"measurement_id": "il6_c2", "study_id": "synthetic_study", "experiment_id": "synthetic_exp", "sample_id": "s_c2", "assay_id": "il6_elisa", "value_reported": 105.0, "unit_reported": "pg/mL", "original_text": "Synthetic value: 105 pg/mL", "provenance": {"source_id": "SYNTH-il6-c2", "locator": "generated record", "extraction_method": "synthetic", "verified": false}},
+    {"measurement_id": "il6_l1", "study_id": "synthetic_study", "experiment_id": "synthetic_exp", "sample_id": "s_l1", "assay_id": "il6_elisa", "value_reported": 195.0, "unit_reported": "pg/mL", "original_text": "Synthetic value: 195 pg/mL", "provenance": {"source_id": "SYNTH-il6-l1", "locator": "generated record", "extraction_method": "synthetic", "verified": false}},
+    {"measurement_id": "il6_l2", "study_id": "synthetic_study", "experiment_id": "synthetic_exp", "sample_id": "s_l2", "assay_id": "il6_elisa", "value_reported": 205.0, "unit_reported": "pg/mL", "original_text": "Synthetic value: 205 pg/mL", "provenance": {"source_id": "SYNTH-il6-l2", "locator": "generated record", "extraction_method": "synthetic", "verified": false}},
+    {"measurement_id": "ido_c1", "study_id": "synthetic_study", "experiment_id": "synthetic_exp", "sample_id": "s_c1", "assay_id": "ido_qpcr", "value_reported": 1.0, "unit_reported": "2^-ΔΔCt", "original_text": "Synthetic relative transcript value: 1.0", "provenance": {"source_id": "SYNTH-ido-c1", "locator": "generated record", "extraction_method": "synthetic", "verified": false}},
+    {"measurement_id": "ido_c2", "study_id": "synthetic_study", "experiment_id": "synthetic_exp", "sample_id": "s_c2", "assay_id": "ido_qpcr", "value_reported": 1.1, "unit_reported": "2^-ΔΔCt", "original_text": "Synthetic relative transcript value: 1.1", "provenance": {"source_id": "SYNTH-ido-c2", "locator": "generated record", "extraction_method": "synthetic", "verified": false}},
+    {"measurement_id": "ido_l1", "study_id": "synthetic_study", "experiment_id": "synthetic_exp", "sample_id": "s_l1", "assay_id": "ido_qpcr", "value_reported": 2.0, "unit_reported": "2^-ΔΔCt", "original_text": "Synthetic relative transcript value: 2.0", "provenance": {"source_id": "SYNTH-ido-l1", "locator": "generated record", "extraction_method": "synthetic", "verified": false}},
+    {"measurement_id": "ido_l2", "study_id": "synthetic_study", "experiment_id": "synthetic_exp", "sample_id": "s_l2", "assay_id": "ido_qpcr", "value_reported": 2.1, "unit_reported": "2^-ΔΔCt", "original_text": "Synthetic relative transcript value: 2.1", "provenance": {"source_id": "SYNTH-ido-l2", "locator": "generated record", "extraction_method": "synthetic", "verified": false}}
+  ]
+}

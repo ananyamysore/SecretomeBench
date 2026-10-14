@@ -1,3 +1,5 @@
+import pandas as pd
+
 from secretomebench.assays import compare_assays
 from secretomebench.markers import normalize_analyte
 from secretomebench.normalization import convert_concentration, convert_duration, normalize_category
